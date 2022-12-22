@@ -45,7 +45,7 @@ jobs:
         else
           export enable_ccache=on
         fi
-        curl -L https://github.com/blueloveTH/aseprite/releases/download/v0.01/skia.zip --output skia.zip
+        curl -L https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-macOS-Release-arm64.zip --output skia.zip
         7z x skia.zip
         cmake -S . -B build -G Ninja \
           -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
@@ -81,4 +81,4 @@ jobs:
         name: aseprite
         path: |
           /Users/runner/work/aseprite/aseprite/build/bin/data
-          /Users/runner/work/aseprite/aseprite/build/bin/aseprite.exe
+          /Users/runner/work/aseprite/aseprite/build/bin/aseprite
